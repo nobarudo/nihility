@@ -2,7 +2,13 @@
 <main>
     <!-- Ranges through content/posts/*.md -->
     {{- range .Pages }}
-      {{ .Render "li" }}
+    <article>
+      <a href="{{.Permalink}}">
+        <div>
+          <h3>{{.Title}}</h3>
+        </div>
+      </a>
+    </article>
     {{ end -}}
 </main>
 {{ end }}
