@@ -1,5 +1,11 @@
+<hr />
 <footer class="container">
+    <div>
+        <a href="/"><small>{{ .Site.Title }}</small></a>
+    </div>
     <div class="copyright">
-        <small>{{ .Site.Title }}</small>
+        {{if .Site.Copyright }}
+            {{ .Site.Copyright }}
+        {{ end }}
     </div>
 </footer>
