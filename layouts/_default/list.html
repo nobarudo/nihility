@@ -1,0 +1,8 @@
+{{ define "main" }}
+<main>
+    <!-- Ranges through content/posts/*.md -->
+    {{- range .Pages }}
+      {{ .Render "li" }}
+    {{ end -}}
+</main>
+{{ end }}

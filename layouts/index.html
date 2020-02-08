@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <div id="wrapper">
-            <div id="content">
-            </div>
-        </div>
-        {{- partial "footer.html" . -}}
-    </body>
-</html>
+{{ define "main" }}
+<main>
+    <!-- Ranges through content/posts/*.md -->
+    {{- $paginator := .Paginate (where (where .Site.RegularPages "Type" "post") ".Params.hiddenfromhomepage" "!=" true) }}
+    {{- range $paginator.Pages -}}
+      {{ .Render "li" }}
+    {{ end -}}
+</main>
+{{ end }}

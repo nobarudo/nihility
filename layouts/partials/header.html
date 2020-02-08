@@ -1,10 +1,14 @@
 <header class="container">
     <div class="row">
-        <div class="eight columns"><h1>{{ .Site.Title }}</h1></div>
+        <div><a href="/"><h1>{{ .Site.Title }}</h1></a></div>
     </div>
     <div class="row">
         <ul>
-            <li style="display:inline-block;padding:5px;">メニュー1</li>
+            {{ range .Site.Menus.main }}
+                <li style="display:inline-block;padding:5px;">
+                    <a href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+            {{ end }}
         </ul>
     </div>
 </header>
