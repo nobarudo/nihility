@@ -1,5 +1,14 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+  <h1 class="page-title">{{ .Title }}</h1>
+  {{ with .Params.categories -}}
+    <div>
+      catetories:
+      {{ range . -}}
+        <a href="{{ "categories" | relLangURL }}/{{ . | urlize }}/"> {{ . }} </a>
+      {{ end -}}
+    </div>
+  {{- end }}
+  <br />
   {{ .Content }}
 
   <br />
@@ -7,11 +16,11 @@
     <div class="tag-list">
         {{ with .Params.tags -}}
           <ul>
-            {{ range . -}}
+            {{ range . }}
               <a href="{{ "tags" | relLangURL }}/{{ . | urlize }}/">#{{ . }}</a>
-            {{ end -}}
+            {{ end }}
           </ul>
-        {{- end -}}
+        {{- end }}
     </div>
 
     <div class="row">
@@ -23,15 +32,18 @@
         </a>
       </div>
       {{- end }}
-      {{ with .PrevInSection -}}
+      {{ with .PrevInSection }}
       <div class="row" style="text-align:right">
         <a class="next" href="{{ .RelPermalink }}">
           <span class="next-text nav-default">{{ .Title }}</span>
           <i class="fas fa-chevron-right"></i>
         </a>
       </div>
-      {{- end }}
+      {{ end }}
+      </div>
     </div>
-  </div>
+  {{if .Site.DisqusShortname }}
+    {{ partial "disqus.html" . }}
+  {{ end }}
 
 {{ end }}

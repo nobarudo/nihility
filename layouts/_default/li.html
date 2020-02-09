@@ -2,14 +2,15 @@
   <a href="{{.Permalink}}">
     <div>
       <h3>{{.Date.Format "2006-01-02"}} | {{.Title}}</h3>
+    </div>
+    </a>
         {{ with .Params.categories -}}
         <div>
+          catetories:
           {{ range . -}}
-             <a href="{{ "categories" | relLangURL }}/{{ . | urlize }}/"> #{{ . }} </a>
+            <a href="{{ "categories" | relLangURL }}/{{ . | urlize }}/"> {{ . }} </a>
           {{ end -}}
         </div>
         {{- end }}
       <div>{{ .Summary }}</div>
-    </div>
-  </a>
 </article>
