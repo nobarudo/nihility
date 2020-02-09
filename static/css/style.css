@@ -1,6 +1,19 @@
+.post {
+    font-size : 1.6rem;
+    font-family: "M PLUS 1p";
+}
+
+img {
+    max-width: 100%;
+}
+
 a {
     color : #494949;
     text-decoration : none;
+}
+
+.post a {
+    color: #0FA0CE;
 }
 
 .sns-icon {
@@ -10,6 +23,7 @@ a {
 .logo {
     display: block;
     font-weight: bold;
+    font-family: "M PLUS Rounded 1c";
 }
 
 .page-title {
@@ -18,11 +32,11 @@ a {
 
 pre,
 pre code {
-  background-color: #f7f7fa;
-  color: #42464c;
+    background-color: #f7f7fa;
+    color: #42464c;
 }
 
 code[data-lang] {
-  background-color: inherit;
-  color: inherit;
+    background-color: inherit;
+    color: inherit;
 }
