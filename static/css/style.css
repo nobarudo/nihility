@@ -6,3 +6,14 @@ a {
 .sns-icon {
     font-size : 2.5rem;
 }
+
+pre,
+pre code {
+  background-color: #f7f7fa;
+  color: #42464c;
+}
+
+code[data-lang] {
+  background-color: inherit;
+  color: inherit;
+}
