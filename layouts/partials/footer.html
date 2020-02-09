@@ -1,5 +1,22 @@
 <hr />
 <footer class="container">
+    <div class = "sns-icon">
+        {{ with .Site.Params.twitter }}
+            <a href="{{ . }}"><i class="fab fa-twitter"></i></a>
+        {{ end }}
+        {{ with .Site.Params.facebook }}
+            <a href="{{ . }}"><i class="fab fa-facebook"></i></a>
+        {{ end }}
+        {{ with .Site.Params.github }}
+            <a href="{{ . }}"><i class="fab fa-github"></i></a>
+        {{ end }}
+        {{ with .Site.Params.gitlab }}
+            <a href="{{ . }}"><i class="fab fa-gitlab"></i></a>
+        {{ end }}
+        {{ with .Site.Params.instagram }}
+            <a href="{{ . }}"><i class="fab fa-instagram"></i></a>
+        {{ end }}
+    </div>
     <div>
         <a href="/"><small>{{ .Site.Title }}</small></a>
     </div>
