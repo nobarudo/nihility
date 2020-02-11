@@ -1,10 +1,5 @@
-.post {
-    font-size : 1.6rem;
-    font-family: "M PLUS 1p";
-}
-
-img {
-    max-width: 100%;
+html {
+    font-family: "M PLUS Rounded 1c";
 }
 
 a {
@@ -12,8 +7,28 @@ a {
     text-decoration : none;
 }
 
+.post {
+    font-size : 1.8rem;
+}
+
+.post img {
+    max-width: 85%;
+}
+
 .post a {
     color: #0FA0CE;
+}
+
+.post h1 {
+    font-size: 4.1rem;
+}
+
+.post h2 {
+    font-size: 3.7rem;
+}
+
+.post h3 {
+    font-size: 3.4rem;
 }
 
 .sns-icon {
@@ -28,6 +43,7 @@ a {
 
 .page-title {
     font-weight: bold;
+    font-family: "M PLUS Rounded 1c";
 }
 
 pre,
@@ -36,7 +52,12 @@ pre code {
     color: #42464c;
 }
 
+code {
+    overflow: scroll;
+}
+
 code[data-lang] {
     background-color: inherit;
     color: inherit;
+    overflow: scroll;
 }
