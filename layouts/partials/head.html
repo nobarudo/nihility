@@ -1,13 +1,12 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <meta charset="utf-8">
-        {{ with .Title | default .Site.Title }}
-    <title>{{ . }}</title>
-    <meta name="twitter:title" content="{{ . }}" />
+    {{ with .Title | default .Site.Title }}
+        <title>{{ . }}</title>
+        <meta name="twitter:title" content="{{ . }}" />
     {{ end }}
 
     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
 
