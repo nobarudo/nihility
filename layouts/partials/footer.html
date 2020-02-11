@@ -1,5 +1,8 @@
 <hr />
 <footer class="container">
+    {{ range .Site.Menus.footer }}
+        <a class="footer-menu" href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
     <div class = "sns-icon">
         {{ with .Site.Params.twitter }}
             <a href="{{ . }}"><i class="fab fa-twitter"></i></a>
@@ -16,9 +19,6 @@
         {{ with .Site.Params.instagram }}
             <a href="{{ . }}"><i class="fab fa-instagram"></i></a>
         {{ end }}
-    </div>
-    <div>
-        <a href="/"><small>{{ .Site.Title }}</small></a>
     </div>
     <div class="copyright">
         {{if .Site.Copyright }}

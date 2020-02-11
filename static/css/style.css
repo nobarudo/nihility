@@ -33,6 +33,8 @@ a {
 
 .sns-icon {
     font-size : 2.5rem;
+    padding-top: 1.7rem;
+    padding-bottom: 1.2rem;
 }
 
 .logo {
@@ -60,4 +62,13 @@ code[data-lang] {
     background-color: inherit;
     color: inherit;
     overflow: scroll;
+}
+
+.copyright {
+    margin-bottom: 3rem;
+}
+
+.footer-menu {
+    margin-top: 0rem;
+    margin-right: 1rem;
 }
