@@ -5,12 +5,12 @@
     <article>
       <a href="{{.Permalink}}">
         <div>
-          <h3>{{.Title}}</h3>
+          <h4 class="page-title">{{.Title}}</h4>
         </div>
-        <div>{{ .Summary }}</div>
+        <div class="post">{{ .Summary }}</div>
       </a>
     </article>
+    <br />
     {{ end -}}
 </main>
-{{ partial "pagination.html" . }}
 {{ end }}

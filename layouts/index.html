@@ -4,6 +4,7 @@
     {{- $paginator := .Paginate (where (where .Site.RegularPages "Type" "post") ".Params.hiddenfromhomepage" "!=" true) }}
     {{- range $paginator.Pages -}}
       {{ .Render "li" }}
+      <br />
     {{ end -}}
 </main>
 {{ partial "pagination.html" . }}

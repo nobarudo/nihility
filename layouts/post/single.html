@@ -1,16 +1,17 @@
 {{ define "main" }}
-  <h1 class="page-title">{{ .Title }}</h1>
+  <h2 class="page-title">{{ .Title }}</h2>
+  <div>
+  {{.Date.Format "2006-01-02"}}
   {{ with .Params.categories -}}
-    <div>
-      catetories:
       {{ range . -}}
         <a href="{{ "categories" | relLangURL }}/{{ . | urlize }}/"> {{ . }} </a>
       {{ end -}}
     </div>
   {{- end }}
   <br />
+  <div class="post">
   {{ .Content }}
-
+  </div>
   <br />
   <div class="post-footer">
     <div class="tag-list">
@@ -42,6 +43,7 @@
       {{ end }}
       </div>
     </div>
+    <br />
   {{if .Site.DisqusShortname }}
     {{ partial "disqus.html" . }}
   {{ end }}
