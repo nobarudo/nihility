@@ -68,3 +68,7 @@ code[data-lang] {
     margin-top: 0rem;
     margin-right: 1rem;
 }
+
+.tag {
+    margin: 0.5rem;
+}
