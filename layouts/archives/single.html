@@ -2,14 +2,15 @@
 <main>
     {{ $year := 0 }}
     {{ range (where .Site.RegularPages "Type" "post") }}
-    <h4>
-        {{ $date := .Date | dateFormat "2006/01"}}
-        {{ if ne $year $date }}
+
+    {{ $date := .Date | dateFormat "2006/01"}}
+    {{ if ne $year $date }}
+        <h4 class="date">
             {{ .Date | dateFormat "2006年 01月"}}
-        {{ end }}
-    </h4>
+        </h4>
+    {{ end }}
     <a href="{{.Permalink}}">
-        <h5 class="page-title">{{.Title}}</h4>
+        <h5 class="page-title" style="padding-left: 1.5rem;">{{.Title}}</h5>
     </a>
     {{ $year = .Date | dateFormat "2006/01" }}
     {{ end }}

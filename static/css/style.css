@@ -72,3 +72,8 @@ code[data-lang] {
 .tag {
     margin: 0.5rem;
 }
+
+.date {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
