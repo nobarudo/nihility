@@ -5,12 +5,12 @@
 
     {{ $date := .Date | dateFormat "2006/01"}}
     {{ if ne $year $date }}
-        <h4 class="date">
+        <h6 class="date">
             {{ .Date | dateFormat "2006年 01月"}}
-        </h4>
+        </h6>
     {{ end }}
     <a href="{{.Permalink}}">
-        <h5 class="page-title" style="padding-left: 1.5rem;">{{.Title}}</h5>
+        <p class="page-title" style="padding-left: 1.7rem;">{{.Title}}</p>
     </a>
     {{ $year = .Date | dateFormat "2006/01" }}
     {{ end }}
