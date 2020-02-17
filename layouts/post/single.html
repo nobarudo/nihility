@@ -1,13 +1,13 @@
 {{ define "main" }}
-  <h2 class="page-title">{{ .Title }}</h2>
-  <div>
+  <h1 class="page-title">{{ .Title }}</h1>
+  <div class="date">
   {{.Date.Format "2006-01-02"}}
   {{ with .Params.categories -}}
-      {{ range . -}}
-        <a href="{{ "categories" | relLangURL }}/{{ . | urlize }}/"> {{ . }} </a>
-      {{ end -}}
-    </div>
+    {{ range . -}}
+      <a class="categorie" href="{{ "categories" | relLangURL }}/{{ . | urlize }}/"> {{ . }} </a>
+    {{ end -}}
   {{- end }}
+  </div>
   <br />
   <div class="post">
   {{ .Content }}

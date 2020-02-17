@@ -1,5 +1,5 @@
 a {
-    color : #494949;
+    color : #505050;
     text-decoration : none;
 }
 
@@ -40,6 +40,12 @@ a {
 }
 
 .page-title {
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: "M PLUS Rounded 1c";
+}
+
+.post-title {
     font-weight: bold;
     font-family: "M PLUS Rounded 1c";
 }
@@ -73,7 +79,11 @@ code[data-lang] {
     margin: 0.5rem;
 }
 
+.categorie {
+    margin-left: 0.5rem;
+}
+
 .date {
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }

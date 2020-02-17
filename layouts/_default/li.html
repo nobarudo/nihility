@@ -1,12 +1,12 @@
 <article>
   <div>
   <a href="{{.Permalink}}">
-    <h4 class="page-title">{{.Title}}</h4>
+    <h4 class="post-title">{{.Title}}</h4>
   </a>
   {{.Date.Format "2006-01-02"}}
     {{ with .Params.categories -}}
       {{ range . -}}
-        <a href="{{ "categories" | relLangURL }}/{{ . | urlize }}/"> {{ . }} </a>
+        <a class="categorie" href="{{ "categories" | relLangURL }}/{{ . | urlize }}/"> {{ . }} </a>
       {{ end -}}
     {{- end }}
     <div class="post">{{ .Summary }}</div>
