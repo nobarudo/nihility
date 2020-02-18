@@ -17,14 +17,28 @@ a {
 
 .post h1 {
     font-size: 4.1rem;
+    padding-bottom: 1.2rem;
 }
 
 .post h2 {
     font-size: 3.7rem;
+    padding-bottom: 1.2rem;
 }
 
 .post h3 {
-    font-size: 3.4rem;
+    font-size: 3.2rem;
+}
+
+.post h4 {
+    font-size: 2.8rem;
+}
+
+.post h5 {
+    font-size: 2.4rem;
+}
+
+.post h6 {
+    font-size: 2rem;
 }
 
 .sns-icon {
