@@ -18,10 +18,14 @@
         <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
     {{- end -}}
 
-    {{ with .Title | default .Site.Title }}
-        <title>{{ . }}</title>
-        <meta property="og:title" content="{{ . }}" />
-        <meta name="twitter:title" content="{{ . }}" />
+    {{ if eq .IsHome false }}
+        <title>{{ .Title }} | {{ .Site.Title }}</title>
+        <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+        <meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
+    {{ else }}
+        <title>{{ .Site.Title }}</title>
+        <meta property="og:title" content="{{ .Site.Title }}" />
+        <meta name="twitter:title" content="{{ .Site.Title }}" />
     {{ end }}
 
     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600&display=swap" rel="stylesheet" type="text/css">
