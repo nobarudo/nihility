@@ -107,3 +107,40 @@ code[data-lang] {
     margin-top: 2rem;
     margin-bottom: 1.5rem;
 }
+
+.share-button {
+    font-size: 3rem;
+    text-align:center;
+    margin: 3rem;
+    overflow: hidden;
+}
+
+.button-icon {
+    width: 4.5rem;
+    height:4.7rem;
+    margin:1rem;
+    border-radius: 100%;
+    border: solid 0.3rem;
+    display:inline-block;
+    letter-spacing:normal;
+}
+.twitter {
+    border-color: #4099ff;
+}
+.facebook {
+    border-color: #3B5998;
+}
+.pocket {
+    border-color: #cb2027;
+}
+
+.icon-twitter {
+    color: #4099ff;
+}
+.icon-facebook {
+    color: #3B5998;
+}
+.icon-pocket {
+    color: #cb2027;
+}
+
