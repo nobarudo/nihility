@@ -2,12 +2,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
 
+    {{ if eq .IsHome false }}
+        <title>{{ .Title }} | {{ .Site.Title }}</title>
+        <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+        <meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
+    {{ else }}
+        <title>{{ .Site.Title }}</title>
+        <meta property="og:title" content="{{ .Site.Title }}" />
+        <meta name="twitter:title" content="{{ .Site.Title }}" />
+    {{ end }}
+
     {{- if .Description -}}
         <meta name="description" content="{{ .Description | safeHTML }}" />
+        <meta name="og:description" content="{{ .Description | safeHTML }}" />
+        <meta name="twitter:description" content="{{ .Description | safeHTML }}" />
     {{- else if .IsPage -}}
         <meta name="description" content="{{ .Summary | plainify }}" />
+        <meta name="og:description" content="{{ .Summary | plainify }}" />
+        <meta name="twitter:description" content="{{ .Summary | plainify }}" />
     {{- else if .Site.Params.description -}}
         <meta name="description" content="{{ .Site.Params.description | safeHTML }}" />
+        <meta name="og:description" content="{{ .Site.Params.description | safeHTML }}" />
+        <meta name="twitter:description" content="{{ .Site.Params.description | safeHTML }}" />
     {{- end -}}
 
     <meta name="generator" content="Hugo {{ .Site.Hugo.Version }}" />
@@ -18,15 +34,13 @@
         <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
     {{- end -}}
 
-    {{ if eq .IsHome false }}
-        <title>{{ .Title }} | {{ .Site.Title }}</title>
-        <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
-        <meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
-    {{ else }}
-        <title>{{ .Site.Title }}</title>
-        <meta property="og:title" content="{{ .Site.Title }}" />
-        <meta name="twitter:title" content="{{ .Site.Title }}" />
-    {{ end }}
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    <meta property="og:locale" content="ja_JP">
+
+    <meta property="twitter:url" content="{{ .Permalink }}">
+    <meta property="twitter:site_name" content="{{ .Site.Title }}">
 
     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600&display=swap" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
