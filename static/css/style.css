@@ -20,31 +20,35 @@ blockquote {
 }
 
 .post h1 {
-    font-size: 4.1rem;
+    font-size: 3.6rem;
+    padding-left: 0.7rem;
     padding-bottom: 1.5rem;
-    border-bottom: solid 3px #d3d3d3;
+    border-bottom: solid 0.3rem #d3d3d3;
+    border-left: solid 0.3rem #d3d3d3;
 }
 
 .post h2 {
-    font-size: 3.7rem;
+    font-size: 3.3rem;
+    padding-left: 0.7rem;
     padding-bottom: 1.2rem;
     border-bottom: solid 0.2rem #d3d3d3;
+    border-left: solid 0.2rem #d3d3d3;
 }
 
 .post h3 {
-    font-size: 3.2rem;
+    font-size: 2.9rem;
     padding-left: 0.7rem;
     border-left: solid 0.2rem #d3d3d3;
 }
 
 .post h4 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     padding-left: 0.7rem;
     border-left: solid 0.1rem #d3d3d3;
 }
 
 .post h5 {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
 }
 
 .post h6 {
@@ -64,7 +68,7 @@ blockquote {
 }
 
 .page-title {
-    font-size: 4rem;
+    font-size: 3.3rem;
     font-weight: bold;
     font-family: "M PLUS Rounded 1c";
 }
