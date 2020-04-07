@@ -1,3 +1,9 @@
+body {
+    font-size : 1.6rem;
+    font-family: "游ゴシック体","游ゴシック Medium","Yu Gothic Medium","游ゴシック","Yu Gothic","メイリオ";
+    font-weight: 500;
+}
+
 a {
     color : #505050;
     text-decoration : none;
@@ -8,7 +14,7 @@ blockquote {
 }
 
 .post {
-    font-size : 1.8rem;
+    font-size : 1.9rem;
 }
 
 .post img {
@@ -64,18 +70,15 @@ blockquote {
 .logo {
     display: block;
     font-weight: bold;
-    font-family: "M PLUS Rounded 1c";
 }
 
 .page-title {
     font-size: 3.3rem;
     font-weight: bold;
-    font-family: "M PLUS Rounded 1c";
 }
 
 .post-title {
     font-weight: bold;
-    font-family: "M PLUS Rounded 1c";
 }
 
 pre,
