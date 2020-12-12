@@ -6,19 +6,43 @@
 
 @media (max-width: 599px) {
     :root {
-      font-size: 8px;
+      font-size: 9px;
+    }
+
+    .container {
+        padding: 0 2px;
+    }
+    .post {
+        font-size : 2.2rem;
+    }
+
+    .post img {
+        max-width: 100%;
     }
 }
 
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-size : 1.5rem;
+    font-size : 1.9rem;
     font-family: "游ゴシック体","游ゴシック Medium","Yu Gothic Medium","游ゴシック","Yu Gothic","メイリオ";
-    font-weight: 500;
 }
 
 a {
     color : #505050;
     text-decoration : none;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
 }
 
 blockquote {
@@ -80,6 +104,10 @@ blockquote {
 }
 
 .logo {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0 0;
+    font-size: 4rem;
     display: block;
     font-weight: bold;
 }
