@@ -1,5 +1,10 @@
 {{ define "main" }}
+  <ol  class="breadcrumb">
+    {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+  </ol>
+
   <h1 class="page-title">{{ .Title }}</h1>
+
   <div class="date">
   {{.Date.Format "2006-01-02"}}
   {{ with .Params.categories -}}

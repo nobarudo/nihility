@@ -193,3 +193,17 @@ code[data-lang] {
 .icon-pocket {
     color: #ffffff;
 }
+
+.breadcrumb {
+    margin: 0;
+    padding: 1rem 0;
+    font-size: 1.3rem;
+}
+.breadcrumb li {
+  display: inline;
+  list-style: none;
+}
+.breadcrumb li:not(:last-child)::after {
+  content: '>';
+  padding: 0 0.5em;
+}
